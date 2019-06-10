@@ -1,12 +1,11 @@
-package VeganSnacks;
+package Lexicon.se.henric.VendingMachine;
 
 import model.Product;
 
-public class CashewNuts extends VeganSnacks {
-	
-	public CashewNuts(String Name, int price) {
+public class VeganRoll extends Product {
+
+	public VeganRoll(String Name, int price) {
 		super(Name, price);
-		
 	}
 
 	@Override
@@ -17,7 +16,8 @@ public class CashewNuts extends VeganSnacks {
 
 	@Override
 	public String use() {
-		return "Cashews are salty roasted and delicious! Yum!";
-		
+		// TODO Auto-generated method stub
+		return null;
 	}
+
 }

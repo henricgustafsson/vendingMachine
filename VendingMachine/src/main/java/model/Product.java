@@ -1,6 +1,6 @@
 package model;
 
-public abstract class Product {
+public abstract class Product{
 
 	/**
 	 * Private fields

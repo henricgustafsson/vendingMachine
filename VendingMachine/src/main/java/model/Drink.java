@@ -1,10 +1,8 @@
-package Drink;
+package model;
 
-import model.Product;
+public class Drink extends Product{
 
-public class Soda extends Drink {
-
-	public Soda(String Name, int price) {
+	public Drink(String Name, int price) {
 		super(Name, price);
 		// TODO Auto-generated constructor stub
 	}
@@ -17,8 +15,8 @@ public class Soda extends Drink {
 
 	@Override
 	public String use() {
-		
-		return "Carbonated sugarwater is yummy!";
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
