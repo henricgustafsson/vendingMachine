@@ -1,8 +1,6 @@
 package Lexicon.se.henric.VendingMachine;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-
 import model.Drink;
 import model.Product;
 import model.VeganSnack;
@@ -16,6 +14,10 @@ public class App
     	products.add(new VeganSnack("LentilChips", 10));
     	products.add(new VeganRoll("HummusRoll",30));
     	
+    	//
     	new VendingMachine(products);
+    	
+    	//TODO: implement code for adding money, returning money,viewing & buying products
+    	
     }
 }

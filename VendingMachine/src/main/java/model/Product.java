@@ -1,6 +1,6 @@
 package model;
 
-public abstract class Product{
+public abstract class Product {
 
 	/**
 	 * Private fields
@@ -11,17 +11,37 @@ public abstract class Product{
 	private int price;
 	
 	
-	
+	private int caloriesInKiloJoules;
+	private int caloriesInKcal;
 
-	/** Constructor
-	 * @param String Name
-	 */
-	public Product(String Name, int price) {
-		setName(Name);
+	
+	
+	public Product(String name, int price, int caloriesInKcal) {
 		setId(++COUNTER);
 		setPrice(price);
+		setName(name);
+		setCaloriesInKcal(caloriesInKcal);
+		int caloriesInKJ = calculateCaloriesFromKcalToKiloJoules(caloriesInKcal);
+		setCaloriesInKiloJoules(caloriesInKJ);
 	}
 	
+	
+	public int getCaloriesInKiloJoules() {
+		return caloriesInKiloJoules;
+	}
+
+	protected void setCaloriesInKiloJoules(int caloriesInKiloJoules) {
+		this.caloriesInKiloJoules = caloriesInKiloJoules;
+	}
+
+	public int getCaloriesInKcal() {
+		return caloriesInKcal;
+	}
+
+	protected void setCaloriesInKcal(int caloriesInKcal) {
+		this.caloriesInKcal = caloriesInKcal;
+	}
+
 	/** getter for field int price
 	 * @return field int price
 	 */
@@ -84,7 +104,16 @@ public abstract class Product{
 	 */
 	public abstract String use();
 	
+
 	
+	
+	/* 1 kcal = 4.18400 kilojoules so rounded down to 4
+	 * */
+	protected int calculateCaloriesFromKcalToKiloJoules(int caloriesInKcal) {
+		return caloriesInKcal *4;
+		
+		
+	}
 	
 	
 	

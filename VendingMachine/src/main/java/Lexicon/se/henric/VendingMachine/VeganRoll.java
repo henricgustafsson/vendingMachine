@@ -4,8 +4,15 @@ import model.Product;
 
 public class VeganRoll extends Product {
 
-	public VeganRoll(String Name, int price) {
-		super(Name, price);
+	public VeganRoll(String name, int price) {
+		//if kcal unspecified, 400 is given);
+		this(name, price,400);
+		
+	}
+	
+	public VeganRoll(String name, int price, int caloriesInKcal) {
+		super(name, price, caloriesInKcal);
+		
 	}
 
 	@Override
