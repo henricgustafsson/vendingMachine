@@ -1,8 +1,10 @@
 package Lexicon.se.henric.VendingMachine;
 
 import java.util.ArrayList;
+import model.Denominators;
 import model.Drink;
 import model.Product;
+import model.VeganRoll;
 import model.VeganSnack;
 
 public class App 
@@ -15,9 +17,24 @@ public class App
     	products.add(new VeganRoll("HummusRoll",30));
     	
     	//
-    	new VendingMachine(products);
+    	VendingMachineImpl vendingMachine =new VendingMachineImpl(products);
     	
-    	//TODO: implement code for adding money, returning money,viewing & buying products
+    	//prompt user to input money
+    	//lets say they choose 100kr
+    	vendingMachine.AddMoney(Denominators.ONEHUNDRED);
+    	//User chooses to view available products
+    	//Print vendingMachine.ViewProducts()
+    	/*prodArr =vendingMachine.getProducts().toArray();
+    	 * loop em, print i .+" prodArr[i].getName()"
+    	 * switch string input get product by id
+    		vendingMachine.buyProduct(productid)
+    		ECT. ECT */
+    	
+    	
+    	
+    	
+    	
+    	
     	
     }
 }

@@ -22,13 +22,24 @@ public enum Denominators {
 	
 	/** static method to count number of members
 	 * @return int
-	 */
-	public static int count() {
+	 
+	@SuppressWarnings("unused")
+	private static int sizeOf() {
 		int i =0;
-		for (Denominators denominator : Denominators.values()) {
+		for ( Denominators denominator : Denominators.values()) {
 			i++;
 		}
 		return i;
 	}
+	
+	public static int[] toArr() {
+		int[] denominatorArr= new int[sizeOf()];
+		for (Denominators denominator : Denominators.values()) {
+			for (int i = 0; i < denominatorArr.length; i++) {
+				denominatorArr[i] = denominator.amount;
+			}
+		}
+		return denominatorArr;
+	} */
 
 }
